@@ -1,0 +1,3 @@
+numpy
+pyqubo
+dwave-ocean-sdk
