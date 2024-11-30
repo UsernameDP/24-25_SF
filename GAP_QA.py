@@ -179,33 +179,3 @@ with open("GAP_RESULTS.txt", "w") as f:
         print(f"Gains : {getGains(sample)}")
         print()
     sys.stdout = original_stdout
-
-
-# def isValid(sample):
-#     global x, w, p, N
-#     weight = 0
-#     for i in range(N):
-#         xi = f"x{i}"
-#         weight += w[i] * sample[xi]
-
-#     check_weight = 0
-#     for i in range(len(w)):
-#         xi = f"x{i}"
-#         check_weight += w[i] * sample[xi]
-
-#     if W >= weight and check_weight == W:
-#         return True
-#     return False
-
-
-# def getGain(sample):
-#     global x, w, p, N
-#     sum = 0
-#     for i in range(N):
-#         xi = f"x{i}"
-#         sum += p[i] * sample[xi]
-#     return sum
-
-
-# for sample, energy in data:
-#     print(sample, energy, isValid(sample), getGain(sample))
