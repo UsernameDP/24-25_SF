@@ -3,16 +3,16 @@ from pyqubo import Binary
 import numpy as np
 from math import *
 
-w = np.array([4, 5, 7, 12, 20, 12])
-p0, p1, p2 = 3, 4, 6
-p = np.array([3, 4, 6, 5, 50, 1])
-x = np.array([Binary(f"x{i}") for i in range(len(w))])
-W = 100
+N = 7
+w = np.array([4, 5, 6, 12, 15, 55, 1])
+p = np.array([3, 4, 10, 12, 6, 10000, 24])
+x = np.array([Binary(f"x{i}") for i in range(N)])
+W = 24
 
 
 def add_free_weights(W, x, w, p):
-    N = ceil(log2(W))
-    for i in range(N):
+    binaries = ceil(log2(W))
+    for i in range(binaries):
         x = np.append(x, Binary(f"x{len(x)}"))
         w = np.append(w, [2**i])
         p = np.append(p, 0)
@@ -20,10 +20,12 @@ def add_free_weights(W, x, w, p):
 
 
 x, w, p = add_free_weights(W, x, w, p)
+print(x, w, p)
 
-A = np.sum(p) + 1
+A = 2 * np.sum(p)
 
 hamiltonian = A * (W - (np.dot(w, x))) ** 2 - (np.dot(p, x))
+print(hamiltonian)
 
 # Compile the model into a QUBO
 model = hamiltonian.compile()
@@ -36,7 +38,7 @@ print("QUBO Matrix:", qubo)
 print("Offset:", offset)
 
 simulated_sampler = SimulatedAnnealingSampler()
-response = simulated_sampler.sample_qubo(qubo, num_reads=100)
+response = simulated_sampler.sample_qubo(qubo, num_reads=125)
 
 # Display the simulated annealing results
 print("Simulated Solutions:")
@@ -44,4 +46,33 @@ print("Simulated Solutions:")
 
 data = [(sample, energy) for sample, energy in response.data(["sample", "energy"])]
 sample, energy = data[0]
-print(f"Sample: {sample}, Energy: {energy}")
+
+
+def isValid(sample):
+    global x, w, p, N
+    weight = 0
+    for i in range(N):
+        xi = f"x{i}"
+        weight += w[i] * sample[xi]
+
+    check_weight = 0
+    for i in range(len(w)):
+        xi = f"x{i}"
+        check_weight += w[i] * sample[xi]
+
+    if W >= weight and check_weight == W:
+        return True
+    return False
+
+
+def getGain(sample):
+    global x, w, p, N
+    sum = 0
+    for i in range(N):
+        xi = f"x{i}"
+        sum += p[i] * sample[xi]
+    return sum
+
+
+for sample, energy in data:
+    print(sample, energy, isValid(sample), getGain(sample))
