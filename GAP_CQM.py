@@ -4,20 +4,23 @@ import random
 
 
 def parse_inputs(filename):
-    N = 40
-    # Weight capacities (limits for each agent)
-    weightCaps = [random.randint(30, 50) for _ in range(N)]
+    # Define the number of agents (M) and tasks (N)
+    M = 10  # Number of agents
+    N = 100  # Number of tasks
 
-    # Weights (costs for assigning tasks to agents)
+    # Generate weight capacities for agents
+    weightCaps = [random.randint(30, 50) for _ in range(M)]
+
+    # Generate weights (costs for assigning tasks to agents)
     weights = [
-        [random.randint(10, 25) for _ in range(N)]  # Random weights between 5 and 20
-        for _ in range(N)
+        [random.randint(5, 20) for _ in range(N)]  # Random weights between 5 and 20
+        for _ in range(M)
     ]
 
-    # Profits (randomized to ensure variability and suitability for assignments)
+    # Generate profits (randomized for variability)
     profits = [
         [random.randint(50, 150) for _ in range(N)]  # Random profits between 50 and 150
-        for _ in range(N)
+        for _ in range(M)
     ]
 
     return weightCaps, weights, profits
@@ -102,6 +105,7 @@ def parse_solution(sampleset, weights, weightCaps, profits):
 
     print(f"Num Agents : {num_agents} | Num Tasks : {num_tasks}")
     print(f"Selected Item Coords : { selected_item_coords }")
+    print(f"Number of Selected Items : { len(selected_item_coords) }")
     print(f"Selected Weights : ")
     for i in range(len(selected_weights)):
         print(
@@ -125,7 +129,7 @@ def main():
     cqm = build_GAP_cqm(weightCaps, weights, profits)
 
     print("Submitting CQM to solver {}.".format(sampler.solver.name))
-    sampleset = sampler.sample_cqm(cqm, label="GAP_CQM", time_limit=25)
+    sampleset = sampler.sample_cqm(cqm, label="GAP_CQM", time_limit=10)
 
     parse_solution(sampleset, weights, weightCaps, profits)
 
