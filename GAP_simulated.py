@@ -7,27 +7,23 @@ import sys
 args = sys.argv[1:]
 import time
 
-M, N = 5, 5  # Number of agents and tasks
+M, N = 3, 3  # Number of agents and tasks
 
 # Weight matrix (cost of assigning task j to agent i)
 w = [
-    [3, 8, 2, 10, 6],  # Agent 1's cost for tasks
-    [5, 6, 7, 3, 4],  # Agent 2's cost for tasks
-    [8, 5, 6, 7, 3],  # Agent 3's cost for tasks
-    [6, 7, 3, 5, 9],  # Agent 4's cost for tasks
-    [4, 3, 8, 6, 5],  # Agent 5's cost for tasks
+    [3, 5, 7],
+    [2, 4, 6],
+    [1, 3, 5],
 ]
 
 # Maximum allowable cost for each task
-t = [12, 15, 10, 20, 18]  # Task 1 to Task 5
+t = [10, 12, 8]
 
 # Profit matrix (profit of assigning task j to agent i)
 p = [
-    [10, 20, 15, 25, 18],  # Agent 1's profit for tasks
-    [15, 18, 22, 10, 12],  # Agent 2's profit for tasks
-    [25, 10, 18, 22, 15],  # Agent 3's profit for tasks
-    [18, 25, 10, 20, 22],  # Agent 4's profit for tasks
-    [12, 15, 20, 18, 25],  # Agent 5's profit for tasks
+    [8, 10, 12],
+    [7, 9, 11],
+    [6, 8, 10],
 ]
 
 
@@ -166,7 +162,7 @@ def getGains(sample):
     return tot
 
 
-with open("GAP_RESULTS.txt", "w") as f:
+with open("GAP_SIMULATED_RESULTS.txt", "w") as f:
     original_stdout = sys.stdout
     sys.stdout = f
 
