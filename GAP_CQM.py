@@ -5,8 +5,8 @@ import random
 
 def parse_inputs(filename):
     # Define the number of agents (M) and tasks (N)
-    M = 10  # Number of agents
-    N = 100  # Number of tasks
+    M = 100  # Number of agents
+    N = 750  # Number of tasks
 
     # Generate weight capacities for agents
     weightCaps = [random.randint(30, 50) for _ in range(M)]
@@ -22,6 +22,8 @@ def parse_inputs(filename):
         [random.randint(50, 150) for _ in range(N)]  # Random profits between 50 and 150
         for _ in range(M)
     ]
+
+    print("Data Generated")
 
     return weightCaps, weights, profits
 
@@ -71,6 +73,8 @@ def build_GAP_cqm(weightCaps, weights, profits):
         )
 
     cqm.set_objective(obj)
+
+    print("CQM Generated")
 
     return cqm
 
@@ -129,7 +133,7 @@ def main():
     cqm = build_GAP_cqm(weightCaps, weights, profits)
 
     print("Submitting CQM to solver {}.".format(sampler.solver.name))
-    sampleset = sampler.sample_cqm(cqm, label="GAP_CQM", time_limit=10)
+    sampleset = sampler.sample_cqm(cqm, label="GAP_CQM", time_limit=500)
 
     parse_solution(sampleset, weights, weightCaps, profits)
 
