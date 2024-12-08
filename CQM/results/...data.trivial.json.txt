@@ -1,0 +1,16 @@
+File Path : ../data/trivial.json
+Time Elapsed : 2.27s
+
+Num Agents : 3 | Num Tasks : 6
+Selected Item Coords : [(0, 4), (1, 1), (1, 5), (2, 0), (2, 2), (2, 3)]
+Number of Selected Items : 6
+Selected Weights : 
+Agent 0 : [6] total weight : 6 cap : 10
+Agent 1 : [5, 4] total weight : 9 cap : 10
+Agent 2 : [2, 2, 2] total weight : 6 cap : 12
+
+Selected Profits : 
+Agent 0 : [-15] profit : -15
+Agent 1 : [-22, -26] profit : -48
+Agent 2 : [-31, -33, -34] profit : -98
+Total Profit : 161.0 

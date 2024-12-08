@@ -1,0 +1,20 @@
+File Path : ../data/beas_15_5_4.json
+Time Elapsed : 2.18s
+
+Num Agents : 5 | Num Tasks : 15
+Selected Item Coords : [(0, 9), (0, 10), (0, 12), (1, 1), (1, 14), (2, 0), (2, 2), (2, 3), (2, 6), (3, 5), (3, 8), (3, 11), (4, 4), (4, 7), (4, 13)]
+Number of Selected Items : 15
+Selected Weights : 
+Agent 0 : [5, 11, 22] total weight : 38 cap : 173
+Agent 1 : [14, 13] total weight : 27 cap : 166
+Agent 2 : [15, 12, 5, 22] total weight : 54 cap : 174
+Agent 3 : [19, 8, 17] total weight : 44 cap : 179
+Agent 4 : [15, 21, 8] total weight : 44 cap : 174
+
+Selected Profits : 
+Agent 0 : [-22, -16, -15] profit : -53
+Agent 1 : [-23, -13] profit : -36
+Agent 2 : [-13, -12, -11, -19] profit : -55
+Agent 3 : [-11, -17, -12] profit : -40
+Agent 4 : [-18, -13, -11] profit : -42
+Total Profit : 226.0 

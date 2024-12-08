@@ -1,0 +1,26 @@
+File Path : ../data/gap8_0.json
+Time Elapsed : 2.54s
+
+Num Agents : 8 | Num Tasks : 48
+Selected Item Coords : [(0, 2), (0, 3), (0, 12), (0, 34), (0, 38), (0, 39), (1, 1), (1, 7), (1, 18), (1, 32), (1, 45), (1, 47), (2, 5), (2, 19), (2, 20), (2, 24), (2, 28), (2, 33), (3, 9), (3, 25), (3, 29), (3, 40), (3, 43), (4, 11), (4, 14), (4, 26), (4, 30), (4, 36), (4, 37), (4, 46), (5, 13), (5, 16), (5, 22), (5, 27), (5, 41), (6, 6), (6, 15), (6, 21), (6, 23), (6, 31), (6, 42), (6, 44), (7, 0), (7, 4), (7, 8), (7, 10), (7, 17), (7, 35)]
+Number of Selected Items : 48
+Selected Weights : 
+Agent 0 : [8, 6, 10, 11, 5, 7] total weight : 47 cap : 48
+Agent 1 : [7, 10, 10, 8, 5, 13] total weight : 53 cap : 53
+Agent 2 : [11, 6, 7, 11, 8, 9] total weight : 52 cap : 52
+Agent 3 : [9, 9, 15, 10, 7] total weight : 50 cap : 52
+Agent 4 : [5, 7, 8, 6, 9, 6, 7] total weight : 48 cap : 48
+Agent 5 : [15, 8, 6, 7, 13] total weight : 49 cap : 50
+Agent 6 : [8, 8, 9, 5, 7, 6, 8] total weight : 51 cap : 53
+Agent 7 : [12, 7, 8, 8, 5, 6] total weight : 46 cap : 47
+
+Selected Profits : 
+Agent 0 : [-18, -18, -16, -17, -18, -15] profit : -102
+Agent 1 : [-16, -18, -18, -16, -15, -16] profit : -99
+Agent 2 : [-18, -16, -17, -17, -16, -16] profit : -100
+Agent 3 : [-16, -15, -16, -15, -21] profit : -83
+Agent 4 : [-16, -18, -17, -15, -15, -16, -17] profit : -114
+Agent 5 : [-15, -18, -17, -18, -16] profit : -84
+Agent 6 : [-16, -15, -18, -18, -17, -16, -16] profit : -116
+Agent 7 : [-15, -17, -18, -16, -18, -16] profit : -100
+Total Profit : 798.0 
