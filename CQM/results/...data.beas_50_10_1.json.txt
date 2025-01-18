@@ -1,30 +1,30 @@
 File Path : ../data/beas_50_10_1.json
-Time Elapsed : 2.65s
+Time Elapsed : 2.99s
 
 Num Agents : 10 | Num Tasks : 50
-Selected Item Coords : [(0, 2), (0, 10), (0, 28), (0, 41), (0, 44), (1, 4), (1, 5), (1, 8), (1, 11), (1, 33), (2, 12), (2, 15), (2, 25), (2, 35), (3, 0), (3, 9), (3, 16), (3, 17), (3, 26), (4, 13), (4, 30), (4, 36), (4, 43), (4, 48), (5, 18), (5, 34), (5, 38), (5, 40), (5, 47), (6, 7), (6, 19), (6, 20), (6, 23), (6, 29), (6, 32), (7, 1), (7, 14), (7, 39), (7, 42), (7, 45), (8, 3), (8, 21), (8, 27), (8, 37), (8, 46), (9, 6), (9, 22), (9, 24), (9, 31), (9, 49)]
+Selected Item Coords : [(0, 2), (0, 6), (0, 10), (0, 12), (0, 28), (1, 4), (1, 8), (1, 11), (1, 33), (1, 48), (2, 15), (2, 25), (2, 31), (2, 35), (3, 0), (3, 9), (3, 16), (3, 26), (3, 27), (4, 13), (4, 30), (4, 36), (4, 43), (4, 44), (5, 18), (5, 34), (5, 38), (5, 40), (5, 47), (6, 7), (6, 19), (6, 20), (6, 23), (6, 29), (6, 32), (7, 1), (7, 14), (7, 39), (7, 42), (7, 45), (8, 3), (8, 17), (8, 21), (8, 37), (8, 46), (9, 5), (9, 22), (9, 24), (9, 41), (9, 49)]
 Number of Selected Items : 50
 Selected Weights : 
-Agent 0 : [5, 12, 9, 23, 7] total weight : 56 cap : 56
-Agent 1 : [8, 15, 9, 8, 12] total weight : 52 cap : 56
-Agent 2 : [20, 20, 8, 12] total weight : 60 cap : 60
-Agent 3 : [8, 9, 14, 6, 13] total weight : 50 cap : 55
-Agent 4 : [10, 18, 6, 12, 9] total weight : 55 cap : 57
+Agent 0 : [5, 19, 12, 8, 9] total weight : 53 cap : 56
+Agent 1 : [8, 9, 8, 12, 9] total weight : 46 cap : 56
+Agent 2 : [20, 8, 18, 12] total weight : 58 cap : 60
+Agent 3 : [8, 9, 14, 13, 9] total weight : 53 cap : 55
+Agent 4 : [10, 18, 6, 12, 10] total weight : 56 cap : 57
 Agent 5 : [8, 21, 18, 6, 9] total weight : 62 cap : 63
 Agent 6 : [7, 5, 6, 10, 20, 10] total weight : 58 cap : 61
 Agent 7 : [9, 8, 22, 10, 6] total weight : 55 cap : 61
-Agent 8 : [8, 10, 24, 7, 10] total weight : 59 cap : 61
-Agent 9 : [10, 7, 6, 17, 18] total weight : 58 cap : 60
+Agent 8 : [8, 22, 10, 7, 10] total weight : 57 cap : 61
+Agent 9 : [17, 7, 6, 12, 18] total weight : 60 cap : 60
 
 Selected Profits : 
-Agent 0 : [-16, -17, -16, -17, -15] profit : -81
-Agent 1 : [-17, -17, -16, -16, -16] profit : -82
-Agent 2 : [-15, -15, -16, -16] profit : -62
-Agent 3 : [-16, -16, -15, -18, -16] profit : -81
-Agent 4 : [-15, -15, -15, -15, -16] profit : -76
-Agent 5 : [-16, -15, -15, -15, -15] profit : -76
-Agent 6 : [-16, -17, -15, -15, -18, -15] profit : -96
-Agent 7 : [-16, -15, -15, -15, -15] profit : -76
-Agent 8 : [-16, -16, -17, -17, -15] profit : -81
-Agent 9 : [-16, -15, -17, -16, -15] profit : -79
+Agent 0 : [16, 15, 17, 16, 16] profit : 80
+Agent 1 : [17, 16, 16, 16, 17] profit : 82
+Agent 2 : [15, 16, 15, 16] profit : 62
+Agent 3 : [16, 16, 15, 16, 20] profit : 83
+Agent 4 : [15, 15, 15, 15, 15] profit : 75
+Agent 5 : [16, 15, 15, 15, 15] profit : 76
+Agent 6 : [16, 17, 15, 15, 18, 15] profit : 96
+Agent 7 : [16, 15, 15, 15, 15] profit : 76
+Agent 8 : [16, 15, 16, 17, 15] profit : 79
+Agent 9 : [16, 15, 17, 18, 15] profit : 81
 Total Profit : 790.0 

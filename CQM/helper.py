@@ -25,7 +25,7 @@ def parse_inputs(filepath):
         # Extract data from JSON
         M = data["numserv"]  # Number of agents
         N = data["numcli"]  # Number of tasks
-        profits = [[-num for num in row] for row in data["cost"]]  # Profits matrix
+        profits = [[num for num in row] for row in data["cost"]]  # Profits matrix
         weights = data["req"]  # Weights matrix
         weightCaps = data["cap"]  # Weight capacities
 
